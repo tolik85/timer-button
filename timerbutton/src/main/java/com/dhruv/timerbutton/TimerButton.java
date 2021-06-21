@@ -71,6 +71,14 @@ public class TimerButton extends RelativeLayout implements Animation.AnimationLi
         init();
     }
 
+    public Button getBaseButton() {
+        return mBaseButton;
+    }
+
+    public void setBaseButton(Button mBaseButton) {
+        this.mBaseButton = mBaseButton;
+    }
+
     private void parseAttributes(Context context, AttributeSet attrs) {
         if (isInEditMode()) {
             return;
