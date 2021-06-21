@@ -285,7 +285,8 @@ public class TimerButton extends RelativeLayout implements Animation.AnimationLi
     public void onAnimationStart(Animation animation) {
         mOverView.setVisibility(View.VISIBLE);
         mTransparentButton.setVisibility(View.VISIBLE);
-        mBaseButton.setEnabled(false);
+        //mBaseButton.setEnabled(false);
+        mBaseButton.setAlpha(0.4f);
         if (mAnimationListener != null) {
             mAnimationListener.onAnimationStart();
         }
@@ -304,7 +305,8 @@ public class TimerButton extends RelativeLayout implements Animation.AnimationLi
     public void onAnimationEnd(Animation animation) {
         mOverView.setVisibility(View.GONE);
         mTransparentButton.setVisibility(GONE);
-        mBaseButton.setEnabled(true);
+        //mBaseButton.setEnabled(true);
+        mBaseButton.setAlpha(1f);
         if (mIsReset) {
             mBaseButton.setText(mBeforeAnimationText);
         } else {
